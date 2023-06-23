@@ -1,13 +1,20 @@
 import java.sql.Time;
 import java.util.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        Date date1 = new Date(2022, 12, 15);
+        Date date2 = new Date(2022, 12, 05);
+
+        Time time1 = new Time(19, 55, 00);
+        Time time2 = new Time(22, 05, 00);
+
         // Création du cinéma
         Cinema cinema = new Cinema("Cineplex", "123 Rue de Cinema");
         System.out.println("Cinema created: " + cinema);
 
-        // Création des place
+        // Création des places
         List<String> places = new ArrayList<>();
         String[] rows = {"A", "B", "C", "D", "E", "F", "G"};
         for(String row : rows) {
@@ -25,7 +32,7 @@ public class Main {
         System.out.println("Salles added to the cinema.");
 
         // Création des films
-        Film film1 = new Film("Titanic", "Un bateau qui coule", new Date());
+        Film film1 = new Film("Titanic", "Un bateau qui coule", date1);
         Film film2 = new Film("Inception", "Un voyage dans les rêves", new Date());
         System.out.println("Films created: " + film1 + ", " + film2);
 
